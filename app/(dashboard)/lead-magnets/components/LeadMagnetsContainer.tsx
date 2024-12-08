@@ -64,22 +64,11 @@ function LeadMagnetsContainer({
       {!isActive && (
         <div className="flex flex-col w-full mt-8 items-center">
           <Card>
-            <CardHeader className="text-center">
-              <CardTitle className="bg-gradient-to-r from-red-500 to-purple-500 inline-block text-transparent bg-clip-text pb-1 w-fit mx-auto">
-                Upgrade To Pro
-              </CardTitle>
-            </CardHeader>
             <CardContent className="flex flex-col">
               <p className="font-semibold text-gray-700 mb-2">
-                {leadMagnets.length} / {MAXIMUM_FREE_LEAD_MAGNETS} Free Lead
-                Magnets Generated
+                {leadMagnets.length} / {MAXIMUM_FREE_LEAD_MAGNETS} 
               </p>
-              <Button variant="ai" onClick={upgrade}>
-                <span className="mr-2">
-                  <HiOutlineSparkles />
-                </span>
-                {upgrading ? "Upgrading..." : "Upgrade"}
-              </Button>
+              
             </CardContent>
           </Card>
         </div>

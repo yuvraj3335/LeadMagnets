@@ -51,6 +51,7 @@ function LeadMagnetEditorNavbar() {
     try {
       await saveLeadMagnet();
       await saveProfile();
+      console.log("HELLLOOO");
       toast.success("Saved!");
     } catch (error) {
       console.log(error);

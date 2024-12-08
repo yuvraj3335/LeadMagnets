@@ -82,24 +82,43 @@ body,
 }
 
 /* ----- LEAD MAGNET EDITOR ----- */
-.purple-dotted-pattern {
-  background-color: #f3e8ff; /* light purple */
-  background-image: radial-gradient(circle, #c3b5f7 1px, transparent 1px),
-    radial-gradient(circle, #c3b5f7 1px, transparent 1px);
-  background-size: 20px 20px;
-  background-position: 0 0, 10px 10px;
-}
 
-.ai-dotted-pattern {
-  background: radial-gradient(
-      circle,
-      rgba(255, 255, 255, 0.4) 1px,
-      transparent 1px
-    ),
-    radial-gradient(circle, rgba(255, 255, 255, 0.4) 1px, transparent 1px),
-    linear-gradient(to right, #fc8181, #9f7aea); /* gradient background */
-  background-size: 20px 20px, 20px 20px, 100%; /* matching sizes for pattern, 100% for gradient */
-  background-position: 0 0, 10px 10px, 0 0; /* positioning for pattern and gradient */
+  purple-dotted-pattern {
+    background: radial-gradient(
+        circle,
+        rgba(255, 223, 186, 0.3) 1px,
+        transparent 1px
+      ),
+      radial-gradient(
+        circle,
+        rgba(255, 223, 186, 0.3) 1px, 
+        transparent 1px
+      ),
+      linear-gradient(to right, #f6d6ad, #bfa8de);
+    background-size: 20px 20px, 20px 20px, 100%;
+    background-position: 0 0, 10px 10px, 0 0; 
+  }
+  
+  .ai-dotted-pattern {
+    background: radial-gradient(
+        circle,
+        rgba(255, 223, 186, 0.3) 1px, /* warm subtle beige dots */
+        transparent 1px
+      ),
+      radial-gradient(
+        circle,
+        rgba(255, 223, 186, 0.3) 1px, /* matching pattern dots */
+        transparent 1px
+      ),
+      linear-gradient(to right, #f6d6ad, #bfa8de); /* softer, muted gradient */
+    background-size: 20px 20px, 20px 20px, 100%; /* matching sizes for pattern, full width for gradient */
+    background-position: 0 0, 10px 10px, 0 0; /* same subtle offset */
+  }
+
+@media (min-width: 768px) {
+  .ai-dotted-pattern {
+    flex-direction: row; /* Change to row for medium and larger screens */
+  }
 }
 
 /* ----- TIP TAP ----- */

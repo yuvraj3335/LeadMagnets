@@ -1,6 +1,13 @@
 const PrismaClient = require("@prisma/client").PrismaClient;
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient({
+  datasources: {
+    db: {
+      url: process.env.DATABASE_URL
+    }
+  },
+  log: ['query', 'info', 'warn', 'error'],
+})
 
 const seed = async () => {
   await prisma.leadMagnet.create({

@@ -95,15 +95,19 @@ async function LeadMagnetPage({ params }: LeadMagnetPageProps) {
   ]);
 
   if (!leadMagnet || !profile) {
-    return <LeadMagnetNotFound returnLink="/" />;
+    return <LeadMagnetNotFound returnLink=  "/" />;
   }
 
   return (
-    <div className="ai-dotted-pattern flex w-screen flex-col justify-between p-6 md:max-h-screen min-h-screen md:flex-row md:p-8 lg:p-12">
-      <LeadMagnetView leadMagnet={leadMagnet} profile={profile} />
+    <div className="ai-dotted-pattern flex min-h-screen w-screen flex-col md:flex-row p-6 md:p-8 lg:p-12">
+      {/* Left Section */}
+      <div className="flex-1 md:w-1/2 md:pr-4">
+        <LeadMagnetView leadMagnet={leadMagnet} profile={profile} />
+      </div>
+      {/* Right Section */}
       <div
         id="ai-chat"
-        className="mb-10 flex max-h-[85vh] flex-1 flex-col rounded-lg bg-white p-4 shadow-lg md:mb-0 md:ml-4 md:overflow-y-scroll md:p-8"
+        className="flex-1 md:w-1/2 flex flex-col max-h-[85vh] rounded-lg bg-white p-4 shadow-lg md:ml-4 md:overflow-y-auto md:p-8"
       >
         <LeadMagnetAIChatContainer
           emailCapturePrompt={leadMagnet.publishedEmailCapture}

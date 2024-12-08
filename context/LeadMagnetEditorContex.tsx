@@ -48,14 +48,17 @@ export const LeadMagnetEditorContextProvider = ({
         method: edittedLeadMagnet.id ? "PUT" : "POST",
         data: {
           ...edittedLeadMagnet,
-          userId: session.user.id,
-        },
+         userId: session.user.id,
+          
+        },  
       });
 
       if (response.data.data) {
+       // setEdittedLeadMagnet(response.data.data); 
         toast.success("Lead Magnet saved successfully");
       }
     } catch (error) {
+      console.error("Error saving Lead Magnet:", error);
       toast.error("Failed to save Lead Magnet");
     }
   };

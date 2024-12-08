@@ -13,7 +13,8 @@
     "seed": "ts-node prisma/seed.ts"
   },
   "dependencies": {
-    "@clerk/nextjs": "^4.25.4",
+    "@clerk/nextjs": "^6.6.0",
+    "@google/generative-ai": "^0.21.0",
     "@prisma/client": "^5.4.2",
     "@radix-ui/react-slot": "^1.0.2",
     "@tiptap/pm": "^2.1.12",

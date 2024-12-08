@@ -1,5 +1,5 @@
 import { prismadb } from "@/lib/prismadb";
-import { currentUser } from "@clerk/nextjs";
+import { currentUser } from '@clerk/nextjs/server';
 import { createUploadthing, type FileRouter } from "uploadthing/next";
 
 const f = createUploadthing();

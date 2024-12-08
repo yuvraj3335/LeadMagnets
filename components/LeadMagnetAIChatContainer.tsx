@@ -110,6 +110,7 @@ function LeadMagnetAIChatContainer({
             <span>Send</span>
           )}
         </button>
+      
       </form>
       {showEmailCaptureModal && (
         <LeadMagnetEmailCaptureModal
@@ -124,3 +125,4 @@ function LeadMagnetAIChatContainer({
 }
 
 export default LeadMagnetAIChatContainer;
+

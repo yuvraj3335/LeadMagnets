@@ -1,5 +1,5 @@
 import { prismadb } from "@/lib/prismadb";
-import { currentUser } from "@clerk/nextjs";
+import { currentUser } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 import { generateFromEmail } from "unique-username-generator";
 import { object, string } from "zod";

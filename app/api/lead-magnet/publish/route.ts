@@ -1,6 +1,6 @@
 import { prismadb } from "@/lib/prismadb";
 import { slugifyLeadMagnet } from "@/lib/utils";
-import { currentUser } from "@clerk/nextjs";
+import { currentUser } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 

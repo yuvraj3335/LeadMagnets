@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { SignInButton, UserButton, currentUser } from "@clerk/nextjs";
-import { User } from "@clerk/nextjs/api";
+import { SignInButton, UserButton } from "@clerk/nextjs";
+import { currentUser } from '@clerk/nextjs/server';
+import { User } from "@clerk/nextjs/server";
 import Link from "next/link";
 import React from "react";
 

@@ -1,5 +1,5 @@
 import { prismadb } from "@/lib/prismadb";
-import { auth } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
 import React from "react";
 import LeadMagnetsContainer from "./components/LeadMagnetsContainer";
 
@@ -12,7 +12,7 @@ const getLeadMagnets = async (userId: string) => {
     return leadMagnets;
   } catch (error) {
     console.error(error);
-    return [];
+    return [];  
   }
 };
 
@@ -43,7 +43,8 @@ const getSubscription = async (userId: string) => {
 };
 
 async function LeadMagnetsPage() {
-  const { userId } = auth();
+  const authResult = await auth(); // Await the auth() result
+  const userId = authResult?.userId;
 
   console.log("userId", userId);
 

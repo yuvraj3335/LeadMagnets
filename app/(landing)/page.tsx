@@ -132,8 +132,9 @@ const HowItWorks = () => {
       <div className="flex flex-col justify-between  sm:flex-row-reverse sm:space-y-0">
         <div className="mx-auto w-full md:w-1/2">
           <Image
+          //images/landing-page-step-2.png
             className="drop-shadow-2xl"
-            src="/images/landing-page-step-2.png"
+            src=""
             width={2282}
             height={1354}
             alt="Step 3: Capture and Convert"
@@ -212,7 +213,7 @@ const Pricing = () => {
         <Card className="text-center">
           <CardHeader>
             <CardDescription className="text-xl">Free Plan</CardDescription>
-            <CardTitle className="text-4xl">$0/Month</CardTitle>
+            <CardTitle className="text-4xl">0/Month</CardTitle>
           </CardHeader>
           <CardContent className="mt-4">
             <p className="mb-2 text-center text-gray-600">
@@ -226,7 +227,7 @@ const Pricing = () => {
         <Card className="text-center">
           <CardHeader>
             <CardDescription className="text-xl">Paid Plan</CardDescription>
-            <CardTitle className="text-4xl">$10/Month</CardTitle>
+            <CardTitle className="text-4xl">10/Month</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="mb-4 text-center text-gray-600">
